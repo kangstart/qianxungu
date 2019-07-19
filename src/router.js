@@ -1,23 +1,31 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
+import Login from './views/login.vue'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
+    {path: '/',redirect:'/login'},
+    {path:'/login',name:'login',component:Login},
     {
-      path: '/',
+      path: '/home',
       name: 'home',
-      component: Home
-    },
-    {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+      component: () => import(/* webpackChunkName: "home" */ './views/home'),
+      children:[
+        {path:'system',name:'system',
+        component:()=>import(/* webpackChunkName:'system' */ '@/components/system/system')},
+        {path:'date',name:'date',
+        component:()=>import(/* webpackChunkName:'date' */ '@/components/date/date')},
+        {path:'message',name:'message',
+        component:()=>import(/* webpackChunkName:'message' */ '@/components/message/message')},
+        {path:'type',name:'type',
+        component:()=>import(/* webpackChunkName:'type' */ '@/components/type/type')},
+        {path:'myvideo',name:'myvideo',
+        component:()=>import(/* webpackChunkName:'myvideo' */ '@/components/myvideo/myvideo')},
+        {path:'weixin',name:'weixin',
+        component:()=>import(/* webpackChunkName:'weixin' */ '@/components/weixin/weixin')},
+      ]
     }
   ]
 })
