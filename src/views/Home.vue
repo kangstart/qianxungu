@@ -23,7 +23,9 @@
         </el-menu>
       </el-aside>
       <el-container>
-        <el-header>Header</el-header>
+        <el-header>
+          <el-button type="danger" plain size="small">退出</el-button>
+        </el-header>
         <el-main>
           <router-view></router-view>
         </el-main>
@@ -81,10 +83,12 @@
     .el-container{
       height: 100%;
       .el-header{
-        background-color: chartreuse;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
       }
       .el-aside{
-        /*background-color: coral;*/
+        background-color: #545c64;
         &::-webkit-scrollbar{
           display: none;
         }
@@ -101,6 +105,9 @@
         background-color: aqua;
       }
     }
+  }
+  .el-menu{
+    border: none;
   }
 </style>
 
