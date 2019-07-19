@@ -84,7 +84,7 @@
         background-color: chartreuse;
       }
       .el-aside{
-        /*background-color: coral;*/
+        background-color: coral;
         &::-webkit-scrollbar{
           display: none;
         }
