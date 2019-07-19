@@ -10,18 +10,18 @@ import '@/api/axios'
 Vue.use(ElementUI)
 Vue.config.productionTip = false
 
-router.beforeEach((to,from,next)=>{
-  if(to.path == '/login'){
-    next()
-  }else{
-    var token = localStorage.getItem('token')
-    if(token){
-      next()
-    }else{
-      next({name:'login',params:{redname:to.name}})
-    }
-  }
-})
+// router.beforeEach((to,from,next)=>{
+//   if(to.path == '/login'){
+//     next()
+//   }else{
+//     var token = localStorage.getItem('token')
+//     if(token){
+//       next()
+//     }else{
+//       next({name:'login',params:{redname:to.name}})
+//     }
+//   }
+// })
 new Vue({
   router,
   store,
