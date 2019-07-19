@@ -11,7 +11,7 @@ export default new Router({
     {
       path: '/home',
       name: 'home',
-      component: () => import(/* webpackChunkName: "home" */ './views/home'),
+      component: () => import(/* webpackChunkName: "home" */ './views/Home'),
       children:[
         {path:'system',name:'system',
         component:()=>import(/* webpackChunkName:'system' */ '@/components/system/system')},
