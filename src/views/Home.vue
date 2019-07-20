@@ -83,6 +83,7 @@
     .el-container{
       height: 100%;
       .el-header{
+<<<<<<< HEAD
         display:flex;
         justify-content:flex-end;
         align-items:center;
@@ -90,6 +91,14 @@
       }
       .el-aside{
         background-color: #545C64;
+=======
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
+      .el-aside{
+        background-color: #545c64;
+>>>>>>> 63ef7a3bc2d1dac5a045e2be20b272ae069b60a4
         &::-webkit-scrollbar{
           display: none;
         }
@@ -109,6 +118,9 @@
         background-color: #F0F2F5;
       }
     }
+  }
+  .el-menu{
+    border: none;
   }
 </style>
 
