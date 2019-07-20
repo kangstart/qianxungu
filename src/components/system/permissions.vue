@@ -6,12 +6,12 @@
       <el-table-column
         prop="date"
         label="名称"
-        width="180">
+        >
       </el-table-column>
       <el-table-column
         prop="name"
         label="描述"
-        width="180">
+        >
       </el-table-column>
       <el-table-column
         prop="address"
@@ -20,6 +20,7 @@
     </el-table>
     </div>
 </template>
+
 
 <script>
 export default {
@@ -43,3 +44,25 @@ export default {
       }
 }
 </script>
+
+<style lang="scss" scoped>
+  .el-table tr{
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    &>td{
+      &:nth-child(1){
+        flex: 1
+      }
+      &:nth-child(2){
+        flex: 1
+      }
+      &:nth-child(3){
+        flex: 3
+      }
+    }
+  }
+</style>
+
+
+

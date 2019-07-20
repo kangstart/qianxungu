@@ -13,8 +13,8 @@ export default new Router({
       name: 'home',
       component: () => import(/* webpackChunkName: "home" */ './views/Home'),
       children:[
-        {path:'system',name:'system',
-        component:()=>import(/* webpackChunkName:'system' */ '@/components/system/system')},
+        {path:'permission',name:'permission',
+        component:()=>import(/* webpackChunkName:'system' */ '@/components/system/permissions')},
         {path:'date',name:'date',
         component:()=>import(/* webpackChunkName:'date' */ '@/components/date/date')},
         {path:'message',name:'message',
