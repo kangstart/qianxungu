@@ -40,9 +40,9 @@
         isOpen: true,
         menuList:[
           {title:"系统管理",index:"1",childrenList:[
-              {title:"角色管理",index:"1-1",path:""},
+              {title:"角色管理",index:"1-1",path:"/home/role"},
               {title:"用户管理",index:"1-2",path:"/home/user"},
-              {title:"权限管理",index:"1-3",path:""}
+              {title:"权限管理",index:"1-3",path:"/home/permission"}
             ]},
           {title:"日历管理",index:"2",childrenList:[
               {title:"日历",index:"2-1",path:""}

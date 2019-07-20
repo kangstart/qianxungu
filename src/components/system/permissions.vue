@@ -43,7 +43,7 @@ export default {
         }
       },
       created () {
-        this.$http.post(this.$apis)
+        this.$http.post(this.$api)
       }
 }
 </script>
