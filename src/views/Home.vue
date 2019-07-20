@@ -17,14 +17,14 @@
               <span>{{item.title}}</span>
             </template>
             <el-menu-item-group>
-              <el-menu-item v-for="childItem in item.childrenList" :index=childItem.index>{{childItem.title}}</el-menu-item>
+              <el-menu-item @click="dataView(childItem)" v-for="childItem in item.childrenList" :index=childItem.index>{{childItem.title}}</el-menu-item>
             </el-menu-item-group>
           </el-submenu>
         </el-menu>
       </el-aside>
       <el-container>
         <el-header>
-          <el-button type="danger" plain size="small">退出</el-button>
+          <el-button @click="logout" type="danger" plain size="small">退出</el-button>
         </el-header>
         <el-main>
           <router-view></router-view>
@@ -40,28 +40,24 @@
         isOpen: true,
         menuList:[
           {title:"系统管理",index:"1",childrenList:[
-              {title:"角色管理",index:"1-1"},
-              {title:"用户管理",index:"1-2"},
-              {title:"权限管理",index:"1-3"}
+              {title:"角色管理",index:"1-1",path:"/home/role"},
+              {title:"用户管理",index:"1-2",path:"/home/user"},
+              {title:"权限管理",index:"1-3",path:"/home/permission"}
             ]},
           {title:"日历管理",index:"2",childrenList:[
-              {title:"日历",index:"2-1"}
+              {title:"日历",index:"2-1",path:""}
             ]},
           {title:"留言管理",index:"3",childrenList:[
-              {title:"留言管理",index:"3-1"}
+              {title:"留言管理",index:"3-1",path:""}
             ]},
           {title:"类型管理",index:"4",childrenList:[
-              {title:"音乐",index:"4-1"}
+              {title:"音乐",index:"4-1",path:""}
             ]},
           {title:"微信端接口",index:"5",childrenList:[
-              {title:"角色管理",index:"5-1"},
-              {title:"用户管理",index:"5-2"},
-              {title:"权限管理",index:"5-3"}
+              {title:"登录接口",index:"5-1",path:""}
             ]},
           {title:"音频管理",index:"6",childrenList:[
-              {title:"角色管理",index:"6-1"},
-              {title:"用户管理",index:"6-2"},
-              {title:"权限管理",index:"6-3"}
+              {title:"音乐列表",index:"6-1",path:""}
             ]}
         ]
       }
@@ -72,6 +68,13 @@
       },
       handleClose(key, keyPath) {
         console.log(key, keyPath);
+      },
+      logout(){
+        localStorage.clear();
+        this.$router.push('/login')
+      },
+      dataView(childItem){
+        this.$router.push(childItem.path)
       }
     }
   }
@@ -107,6 +110,7 @@
       }
       .el-main{
         background-color: #F0F2F5;
+
       }
     }
   }
