@@ -178,16 +178,7 @@ export default {
         });
     },
 
-    // deleteItem(index, row) {
-    //   console.log(row);
-    //   let _id = row._id;
-    //   console.log(_id);
 
-    //   this.$http.post(this.$api.deletePermission, { _id: _id }).then(resp => {
-    //     console.log(resp);
-    //     this.loadData();
-    //   });
-    // }
   }
 };
 =======
@@ -213,22 +204,7 @@ created () {
   margin-left: 10px;
 }
 
-// .el-table tr {
-//   display: flex;
-//   // justify-content: center;
-//   align-items: center;
-//   & > td {
-//     &:nth-child(1) {
-//       flex: 1;
-//     }
-//     &:nth-child(2) {
-//       flex: 1;
-//     }
-//     &:nth-child(3) {
-//       flex: 3;
-//     }
-//   }
-// }
+
 </style>
 
 
