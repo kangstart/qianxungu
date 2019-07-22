@@ -2,7 +2,7 @@
   <div class="login">
     <div class="left">
     <div class="head">天音谷</div>
-      <el-form :model="ruleForm" :rules="rules" ref="ruleForm">
+      <el-form :model="ruleForm" :rules="rules" ref="ruleForm" >
         <el-form-item label="用户名" prop="username">
           <el-input placeholder="请输入用户名" v-model="ruleForm.username" clearable style="width:300px;"></el-input>
         </el-form-item>
@@ -12,6 +12,7 @@
             placeholder="请输入密码"
             v-model="ruleForm.password"
             show-password
+            
           ></el-input>
         </el-form-item>
         <div class="box">
@@ -32,6 +33,7 @@
 export default {
   data() {
     return {
+      
       checkcode:'点击获取验证码',
       checktext:'',
       codedata:'',
@@ -67,7 +69,7 @@ export default {
             console.log(res);
             if (res.data.success) {
               var token = res.data.token;
-              var username = res.data.username;
+              var username = res.config.data.username;
               localStorage.setItem("token", token);
               localStorage.setItem("username", username);
               console.log(this.$route.params.redname);
