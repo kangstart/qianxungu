@@ -8,6 +8,7 @@ import 'element-ui/lib/theme-chalk/index.css';
 import 'reset-css'
 import '@/api/api'
 import '@/api/axios'
+import '@/until/tool.js'
 Vue.use(ElementUI)
 
 
