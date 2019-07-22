@@ -51,7 +51,6 @@ export default {
         permissionDesc: "",
         permissionLeve: ""
       },
-<<<<<<< HEAD
       rules: {
         permissionName: [{ required: true, message: "请输入权限名称", trigger: "blur" }],
         permissionDesc: [{ required: true, message: "请输入权限描述", trigger: "blur" }],
@@ -110,14 +109,12 @@ export default {
         
       })
     }
-  }
-};
-=======
-      created () {
+  },
+      
+created () {
         this.$http.post(this.$api)
       }
 }
->>>>>>> 785ab4f8770e9b7f7ff962c68e4a386ec63ad8bd
 </script>
 
 <style lang="scss" scoped>

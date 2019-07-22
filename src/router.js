@@ -19,6 +19,10 @@ export default new Router({
 
         {path:'user',name:'user',
         component:()=>import(/* webpackChunkName:'system' */ '@/components/system/user')},
+        // {path:'system',name:'system',
+        // component:()=>import(/* webpackChunkName:'system' */ '@/components/system/system')},
+        {path:'role',name:'role',
+        component:()=>import(/* webpackChunkName:'role' */ '@/components/system/role')},
         {path:'date',name:'date',
         component:()=>import(/* webpackChunkName:'date' */ '@/components/date/date')},
         {path:'message',name:'message',
