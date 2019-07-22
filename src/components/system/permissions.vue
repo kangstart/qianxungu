@@ -60,15 +60,10 @@ export default {
       form: {
         permissionName: "",
         permissionDesc: "",
-<<<<<<< HEAD
         permissionLeve: "",
         parentid:"",
         
       },//添加权限接口参数
-=======
-        permissionLeve: ""
-      },
->>>>>>> 078a808bd7c9629940dd7b92afd28dbf955695d1
       rules: {
         permissionName: [
           { required: true, message: "请输入权限名称", trigger: "blur" }
@@ -137,7 +132,6 @@ export default {
         this.parentIdDis = false;
       }
     }
-<<<<<<< HEAD
     ,
     changeId(value){
       console.log(value);
@@ -178,17 +172,8 @@ export default {
         });
     },
 
-
   }
 };
-=======
-  },
-      
-created () {
-        this.$http.post(this.$api)
-      }
-}
->>>>>>> 078a808bd7c9629940dd7b92afd28dbf955695d1
 </script>
 
 <style lang="scss" scoped>
