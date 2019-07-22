@@ -2,9 +2,12 @@ import axios from 'axios'
 import Vue from 'vue'
 axios.defaults.timeout = 5000;//超时时间
 axios.defaults.baseURL = process.env.VUE_APP_BASEURL;
- 
+// axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+
 axios.interceptors.request.use(
     config=>{
+        // var token = localStorage.getItem("token");
+        // config.headers.common['Authorization']='Bearer '+token;
         return config;
     }
 )
