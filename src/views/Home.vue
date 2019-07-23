@@ -48,16 +48,16 @@
               {title:"日历",index:"2-1",path:""}
             ]},
           {title:"留言管理",index:"3",childrenList:[
-              {title:"留言管理",index:"3-1",path:""}
+              {title:"留言管理",index:"3-1",path:"/home/message"}
             ]},
           {title:"类型管理",index:"4",childrenList:[
-              {title:"音乐",index:"4-1",path:""}
+              {title:"音乐类型",index:"4-1",path:"/home/type"}
             ]},
           {title:"微信端接口",index:"5",childrenList:[
               {title:"登录接口",index:"5-1",path:""}
             ]},
           {title:"音频管理",index:"6",childrenList:[
-              {title:"音乐列表",index:"6-1",path:""}
+              {title:"音乐列表",index:"6-1",path:"/home/myvideo"}
             ]}
         ]
       }
