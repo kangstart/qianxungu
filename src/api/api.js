@@ -16,7 +16,6 @@ var api = {
     findPermission:'/system/permission/findPermission',
     addNewPermission:'/system/permission/addNewPermission',
     deletePermission:'/system/permission/deletePermission',
-<<<<<<< HEAD
     //音频
     findMusic:'/webapp/findMusic',
     updateMusicInfo:'/music/updateMusicInfo',
@@ -28,26 +27,10 @@ var api = {
     deleteMusicType:'/music/deleteMusicType',
     //留言
     addNewMessage:'/message/addNewMessage',
-=======
-
-    //日历管理
-    findDailyBackground:'/webapp/findDailyBackground?from=2019-06-12&to=2019-06-15',
+    //日历
+    findDailyBackground:'/webapp/findDailyBackground',
     setDailyBackground:'/daily/setDailyBackground',
-    setDailyBackgroundLike:'/daily/setDailyBackgroundLike',
-    //留言管理
-    addNewMessage:'/message/addNewMessage',
-    //类型管理
-    findMusicTypes:'/music/findMusicTypes',
-    addNewMusicType:'/music/addNewMusicType',
-    deleteMusicType:'/music/deleteMusicType',
-    //微信端
-    login:'/user/signin',
-    //音频管理
-    findMusic:'/webapp/findMusic',
-    uploadMusic:'/music/uploadMusic',
-    updateMusicInfo:'/music/updateMusicInfo',
-    deleteMusic:'/music/deleteMusic'
->>>>>>> huang
+    setDailyBackgroundLike:'/daily/setDailyBackgroundLike'
 }
 Vue.prototype.$api = api;
 export default{api}
