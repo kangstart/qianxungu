@@ -72,7 +72,7 @@ export default {
               var username = res.config.data.username;
               localStorage.setItem("token", token);
               localStorage.setItem("username", username);
-              console.log(this.$route.params.redname);
+              // console.log(this.$route.params.redname);
               this.$router.push({
                 name: this.$route.params.redname
                   ? this.$route.params.redname
