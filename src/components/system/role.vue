@@ -36,12 +36,12 @@
       </span>
     </el-dialog>
     <el-table :data="tableData" style="width: 100%">
-      <el-table-column label="角色名称" width="180">
+      <el-table-column label="角色名称">
         <template slot-scope="scope">
           <span style="margin-left: 10px">{{ scope.row.roleName }}</span>
         </template>
       </el-table-column>
-      <el-table-column label="角色描述" width="180">
+      <el-table-column label="角色描述">
         <template slot-scope="scope">
           <span style="margin-left: 10px">{{ scope.row.roleDesc }}</span>
         </template>

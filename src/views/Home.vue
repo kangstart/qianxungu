@@ -11,13 +11,13 @@
                 text-color="#fff"
                 active-text-color="#ffd04b"
                 :unique-opened=isOpen>
-          <el-submenu v-for="item in menuList" :index=item.index>
+          <el-submenu v-for="item in menuList" :index=item.index :key=item.index>
             <template slot="title">
               <i class="el-icon-location"></i>
               <span>{{item.title}}</span>
             </template>
             <el-menu-item-group>
-              <el-menu-item @click="dataView(childItem)" v-for="childItem in item.childrenList" :index=childItem.index>{{childItem.title}}</el-menu-item>
+              <el-menu-item @click="dataView(childItem)" v-for="childItem in item.childrenList" :index=childItem.index :key=childItem.index>{{childItem.title}}</el-menu-item>
             </el-menu-item-group>
           </el-submenu>
         </el-menu>
@@ -45,7 +45,7 @@
               {title:"权限管理",index:"1-3",path:"/home/permission"}
             ]},
           {title:"日历管理",index:"2",childrenList:[
-              {title:"日历",index:"2-1",path:""}
+              {title:"日历",index:"2-1",path:"/home/date"}
             ]},
           {title:"留言管理",index:"3",childrenList:[
               {title:"留言管理",index:"3-1",path:"/home/message"}
