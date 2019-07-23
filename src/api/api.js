@@ -15,8 +15,16 @@ var api = {
     //权限
     findPermission:'/system/permission/findPermission',
     addNewPermission:'/system/permission/addNewPermission',
-    deletePermission:'/system/permission/deletePermission'
-
+    deletePermission:'/system/permission/deletePermission',
+    //音频
+    findMusic:'/webapp/findMusic',
+    updateMusicInfo:'/music/updateMusicInfo',
+    deleteMusic:'/music/deleteMusic',
+    uploadMusic:'/music/uploadMusic',
+    //类型
+    findMusicTypes:'/music/findMusicTypes',
+    addNewMusicType:'/music/addNewMusicType',
+    deleteMusicType:'/music/deleteMusicType',
 }
 Vue.prototype.$api = api;
 export default{api}
