@@ -26,7 +26,7 @@
                 </el-form-item>
                 <el-form-item label="角色:" :label-width="formLabelWidth">
                     <el-checkbox-group v-model="form.rolename">
-                        <el-checkbox v-for="item in allRoles" :label=item.roleName></el-checkbox>
+                        <el-checkbox v-for="item in allRoles" :label=item.roleName :key=item._id></el-checkbox>
                     </el-checkbox-group>
                 </el-form-item>
             </el-form>

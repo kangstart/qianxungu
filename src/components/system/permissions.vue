@@ -104,7 +104,7 @@ export default {
               this.$message({ message: "新增权限成功", type: "success" });
               this.loadData();
               this.visible = false;
-              this.$refs[formName].resetFields();
+              this.$refs[forName].resetFields();
             }
           });
         } else {
